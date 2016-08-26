@@ -31,7 +31,19 @@
   border-radius: 6px;
   padding: 25px;
   color: red;
+  margin-top: 50px;
+}
+.totalBox {
+  /*text-align: center;*/
 }
 #logo {
   float: left;
+}
+#totalDiv {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+#confirmationPicture {
+  text-align: center;
 }
