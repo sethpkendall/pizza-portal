@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="Bootstrap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to the Movies!</h1>
+        <div class="row">
+          <div class="col-xs-4 movie1">
+
+          </div>
+        </div>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="movie-name">Select a movie</label>
+          <select class="form-control" id="movie-name">
+            <option>Don't Breathe</option>
+            <option>Suicide Squad</option>
+            <option>Ben-Hur</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="time">Select a show time</label>
+          <select class="form-control" id="time">
+            <option value="1">1:00pm</option>
+            <option value="2">3:00pm</option>
+            <option value="3">7:30pm</option>
+            <option value="4">9:00pm</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="age">Please enter your age</label>
+          <input type="number" id="age">
+        </div>
+        <button class="btn-success btn-lg"type="submit" name="button">Let's go to the movies!</button>
+      </form>
+      <div class="output">
+        <h1 class="result"></h1>
+      </div>
+    </div>
+  </body>
+</html>
