@@ -1,7 +1,6 @@
 //Back-End
 //Variable Declarations
 var counter = 0
-var gTotal = 0
 //Objects
 function Pizza(size, name) {
   this.ingredients = [];
@@ -9,11 +8,11 @@ function Pizza(size, name) {
   this.price = 8;
   this.name = name;
 }
+//Pizza Object Methods
 Pizza.prototype.addTops = function(array) {
   for(i=0;i<array.length;i++) {
     this.ingredients.push(parseInt(array[i]));
   }
-  //
   // array.forEach(function(topping) {
   //   this.ingredients.push(topping);
   // });
@@ -43,10 +42,11 @@ function Order() {
   this.rush = false;
   this.grandTotal = 0;
 }
+var order = new Order;
+//Order Object Methods
 Order.prototype.calcGTotal = function(total) {
   this.grandTotal += total;
 }
-var order = new Order;
 //Functions
 var nameGen = function(size) {
   if (size==="1") {
@@ -63,23 +63,22 @@ var nameGen = function(size) {
 $(document).ready(function() {
   $("form#pizza1").submit(function(event) {
     event.preventDefault();
-    var size1 = $("#size").val();
-    var name = "A " + nameGen(size1)+" pizza";
-    var pizza = new Pizza(size1, name);
+    var pizzaSize = $("#size").val();
+    var pizzaName = "A " + nameGen(pizzaSize)+" pizza";
+    var pizza = new Pizza(pizzaSize, pizzaName);
     order.items.push(pizza);
     $(".jumbotron").slideToggle();
     $(".topsAdd").slideToggle();
   });
   $("form.toppings").submit(function(event) {
-    console.log(counter);
     event.preventDefault();
     var toppingsArr = []
     $("input:checkbox[name=topping]:checked").each(function(){
         toppingsArr.push($(this).val());
     });
+    $('input:checkbox').prop('checked', false);
     order.items[counter].addTops(toppingsArr);
     var total = order.items[counter].calcCost();
-    gTotal += total;
     order.calcGTotal(total);
     var node = document.createElement("li");
     var textnode = document.createTextNode(order.items[counter].name);
@@ -93,9 +92,9 @@ $(document).ready(function() {
   });
   $("form#pizza2").submit(function(event) {
     event.preventDefault();
-    var size1 = $("#size2").val();
-    var name = "A " + nameGen(size1)+" pizza";
-    var pizza = new Pizza(size1, name);
+    var pizzaSize = $("#size2").val();
+    var pizzaName = "A " + nameGen(pizzaSize)+" pizza";
+    var pizza = new Pizza(pizzaSize, pizzaName);
     order.items.push(pizza);
     $(".thanks").slideToggle();
     $(".topsAdd").slideToggle();
