@@ -26,6 +26,10 @@ _This program is designed to take in pizza order specifications, store ordered p
   * Example Input: "1 Large pizza with: Cheese, Pepperoni, Mushrooms, 1 Medium pizza with: Cheese"
   * Example Output: "Total Cost: $23.00"
 
+* It can update the final total with added sales tax as well as additional charges for extra services.
+  * Example Input: "1 Large pizza with: Cheese, Pepperoni, Mushrooms, 1 Medium pizza with: Cheese. Rush order."
+  * Example Output: "Total Cost + tax: $26.75"
+
 ## Setup Instructions
 
 * _Clone the program from its github repository_

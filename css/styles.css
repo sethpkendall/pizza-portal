@@ -1,0 +1,24 @@
+.jumbotron {
+  background-color: #ffffff;
+  border: solid red 2px;
+  padding-top: 20px;
+}
+.jumbotron h2 {
+  padding-top: 150px;
+  color: red;
+  font-size: 50px;
+  font-family: fantasy;
+  font-style: italic;
+}
+.emphasis {
+  font-style: italic;
+}
+.btn {
+  background-color: red;
+}
+.topsAdd {
+  display: none;
+}
+#logo {
+  float: left;
+}
