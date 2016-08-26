@@ -44,16 +44,28 @@
           <div class="col-xs-10">
             <div class="row">
               <div class="col-xs-6">
-                <h3>Pick your toppings:</h3>
-                <form action="form_action.asp">
-                <input type="checkbox" name="Cheese" value="cheese">Cheese<br>
-                <input type="checkbox" name="Pepperoni" value="pepperoni">Pepperoni<br>
-                <br>
-                <input type="button" value="Send order">
+                <h3>Pick your protein:</h3>
+                <form action="form_action.asp" class="toppings">
+                <input type="checkbox" name="topping" value="1" id="cheese">Cheese<br>
+                <input type="checkbox" name="topping" value="2">Pepperoni<br>
+                <input type="checkbox" name="topping" value="3">Sausage<br>
+                <input type="checkbox" name="topping" value="4">Canadian Bacon<br>
+                <input type="checkbox" name="topping" value="5">Steak<br>
+                <input type="checkbox" name="topping" value="6">Tofu<br>
                 </form>
               </div>
               <div class="col-xs-6">
-
+                <h3>Pick additional toppings:</h3>
+                <form action="form_action.asp" class="toppings">
+                <input type="checkbox" name="topping" value="7">Onions<br>
+                <input type="checkbox" name="topping" value="8">Green Peppers<br>
+                <input type="checkbox" name="topping" value="9">Mushrooms<br>
+                <input type="checkbox" name="topping" value="10">Pineapple<br>
+                <input type="checkbox" name="topping" value="11">Olives<br>
+                <input type="checkbox" name="topping" value="12">Jalapenos<br>
+                <br>
+                <button class="btn-danger btn" type="submit" name="button" id="topSubmit">Submit</button>
+                </form>
               </div>
             </div>
           </div>

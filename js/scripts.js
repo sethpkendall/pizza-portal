@@ -4,6 +4,16 @@
 function Pizza(size) {
   this.ingredients = [];
   this.size = size;
+  this.price = 8;
+}
+Pizza.prototype.addTops = function(array) {
+  for(i=0;i<array.length;i++) {
+    this.ingredients.push(array[i]);
+  }
+  //
+  // array.forEach(function(topping) {
+  //   this.ingredients.push(topping);
+  // });
 }
 function Order() {
   this.items = [];
@@ -20,5 +30,14 @@ $(document).ready(function() {
     $(".jumbotron").slideToggle();
     $(".topsAdd").slideToggle();
   });
-
+  $("form.toppings").submit(function(event) {
+    event.preventDefault();
+    var toppingsArr = []
+    $("input:checkbox[name=topping]:checked").each(function(){
+        toppingsArr.push($(this).val());
+    });
+    console.log(toppingsArr);
+    debugger;
+    order.items[0].addTops(toppingsArr);
+  });
 });
