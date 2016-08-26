@@ -16,8 +16,12 @@
 .btn {
   background-color: red;
 }
-.topsAdd {
+.stagedReveal {
   display: none;
+}
+.heading {
+  color: red;
+  text-decoration: underline;
 }
 #logo {
   float: left;

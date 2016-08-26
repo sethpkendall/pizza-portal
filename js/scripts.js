@@ -7,13 +7,27 @@ function Pizza(size) {
   this.price = 8;
 }
 Pizza.prototype.addTops = function(array) {
+  console.log(array);
   for(i=0;i<array.length;i++) {
-    this.ingredients.push(array[i]);
+    this.ingredients.push(parseInt(array[i]));
   }
+  console.log(this.ingredients);
   //
   // array.forEach(function(topping) {
   //   this.ingredients.push(topping);
   // });
+  // QUESTION: Why didn't this forEach loop work?
+}
+Pizza.prototype.calcCost = function() {
+  debugger;
+  for(i=0;i<this.ingredients.length;i++) {
+    if ((this.ingredients[i]>=1)&&(this.ingredients[i]<=6)) {
+      this.price += 2;
+    } else if (this.ingredients[i]>=7 && this.ingredients[i]<=12){
+      this.price +=1;
+    }
+  }
+  return this.price;
 }
 function Order() {
   this.items = [];
@@ -36,8 +50,12 @@ $(document).ready(function() {
     $("input:checkbox[name=topping]:checked").each(function(){
         toppingsArr.push($(this).val());
     });
-    console.log(toppingsArr);
-    debugger;
     order.items[0].addTops(toppingsArr);
+    var total = order.items[0].calcCost();
+    console.log(total);
+    $("#totalHere").text(total);
+    $(".topsAdd").slideToggle();
+    $(".thanks").show();
+    $(".totalBox").show();
   });
 });
