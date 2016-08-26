@@ -69,8 +69,8 @@
           </div>
           <div class="row stagedReveal thanks framed">
             <div class="col-xs-9 ">
-              <img src="img/order_confirm.jpg" alt="Confirmation Picture" class="img-responsive" id="confirmationPicture"/>
-              <h1>thank you</h1>
+              <img src="img/order_confirm.jpg" alt="Confirmation Picture" class="img-responsive" />
+              <h1>Thank you for your order!</h1>
               <p>Hang on, I need another pizza!</p>
               <form id="pizza2">
                 <div class="form-group">
@@ -90,6 +90,43 @@
               <button class="btn-danger btn btn-large" type="button" name="button" id="goToDelivery">I'm ready to submit this order</button>
             </div>
           </div>
+          <div class="delivery stagedReveal framed">
+            <h3>What is your delivery address?</h3>
+            <form id="new-address">
+              <div class="form-group">
+                <label for="Name">First name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div>
+                <div class="new-address">
+                  <div class="form-group">
+                    <label for="new-street-name">Street</label>
+                    <input type="text" class="form-control new-street" id="street">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-city">City</label>
+                    <input type="text" class="form-control new-city" id="city">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-state">State</label>
+                    <input type="text" class="form-control new-state" id="state">
+                  </div>
+                  <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" class="form-control" id="zip">
+                  </div>
+                  <div class="form-group">
+                    <label for="address-type">Rush Order (Skip the line for $5 extra!)</label>
+                    <select class="form-control" id="rushOrder">
+                      <option value="1">No, Thank you.</option>
+                      <option value="2">Yes Please!</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger" id="deliverySubmit">Deliver here</button>
+            </form>
+          </div>
         </div>
         <div class="col-xs-3 col-xs-offset-1 stagedReveal totalBox framed">
           <h3 class="heading">Order total</h3>
@@ -97,7 +134,20 @@
           </ol>
           <div class="row">
             <div class="col-xs-10 col-xs-offset-1" id="totalDiv">
-              <p><span class="framed" id="totalHere"></span></p>
+              <p>$<span class="framed" id="totalHere"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3 goodbye stagedReveal framed">
+            <h3>Thank you <span id="nameHere"></span>!</h3>
+            <div class="row">
+              <div class="col-xs-7 addressText">
+                <h3>Your Final order total is: $<span id="finalTotalHere"></span></h3>
+                <h3>We will deliver to this address:</h3>
+                <h4><span id="streetHere"></span></h4>
+                <h4><span id="cityHere"></span>, <span id="stateHere"> <span id="zipHere"></span></span></h4>
+              </div>
             </div>
           </div>
         </div>

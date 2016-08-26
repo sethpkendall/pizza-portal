@@ -20,15 +20,19 @@ _This program is designed to take in pizza order specifications, store ordered p
 
 * It can calculate and display a price based upon the size and ingredients of the pizza.
   * Example Input: "1 Large pizza with: Cheese, Pepperoni, Mushrooms"
-  * Example Output: "Total Cost: $14.50"
+  * Example Output: "Total: $14.50"
 
 * It can store orders of more than one pizza and return a total that represents the cost of all pizzas ordered.
   * Example Input: "1 Large pizza with: Cheese, Pepperoni, Mushrooms, 1 Medium pizza with: Cheese"
   * Example Output: "Total Cost: $23.00"
 
-* It can update the final total with added sales tax as well as additional charges for extra services.
+* It can update the final total with additional charges for extra services.
   * Example Input: "1 Large pizza with: Cheese, Pepperoni, Mushrooms, 1 Medium pizza with: Cheese. Rush order."
-  * Example Output: "Total Cost + tax: $26.75"
+  * Example Output: "Total Cost: $28.00"
+
+* It can take in address information and store it for delivery.
+  * Example Input: street address: 3190 Dockside Dr. City: Gainesville State: GA Zip:30501
+  * Example Output: Delivery address: (3190 Dockside Dr. Gainesville, GA 30501)
 
 ## Setup Instructions
 

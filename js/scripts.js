@@ -59,6 +59,13 @@ var nameGen = function(size) {
     return "Extra-large"
   }
 }
+var checkRushed = function(value) {
+  if (value==="1") {
+    console.log("something")
+  } else if (value==="2") {
+    order.grandTotal += 5;
+  }
+}
 //Front-End
 $(document).ready(function() {
   $("form#pizza1").submit(function(event) {
@@ -98,5 +105,28 @@ $(document).ready(function() {
     order.items.push(pizza);
     $(".thanks").slideToggle();
     $(".topsAdd").slideToggle();
+  });
+  $("#goToDelivery").click(function(event) {
+    $(".thanks").slideToggle();
+    $(".delivery").slideToggle();
+  });
+  $("form#new-address").submit(function(event) {
+    event.preventDefault();
+    $(".delivery").slideToggle();
+    $(".totalBox").slideToggle();
+    $(".goodbye").slideToggle();
+    var orderName = $("input#name").val();
+    var orderStreet = $("input#street").val();
+    var orderCity = $("input#city").val();
+    var orderState = $("input#state").val();
+    var orderZip = $("input#zip").val();
+    var rushed = $("#rushOrder").val();
+    checkRushed(rushed);
+    $("#nameHere").text(orderName);
+    $("#streetHere").text(orderStreet);
+    $("#cityHere").text(orderCity);
+    $("#stateHere").text(orderState);
+    $("#zipHere").text(orderZip);
+    $("#finalTotalHere").text(order.grandTotal);
   });
 });
