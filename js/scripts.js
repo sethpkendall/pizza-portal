@@ -79,20 +79,14 @@ $(document).ready(function() {
     });
     order.items[counter].addTops(toppingsArr);
     var total = order.items[counter].calcCost();
-    console.log(total);
     gTotal += total;
     order.calcGTotal(total);
-    console.log(order.grandTotal);
+    var node = document.createElement("li");
+    var textnode = document.createTextNode(order.items[counter].name);
+    node.appendChild(textnode);
+    document.getElementById("output").appendChild(node);
     counter++;
     $("#totalHere").text(order.grandTotal);
-    debugger;
-    for (var i=0;i<order.items.length;i++){
-      var node = document.createElement("li");
-      var textnode = document.createTextNode(order.items[i].name);
-      node.appendChild(textnode);
-      document.getElementById("output").appendChild(node);
-    }
-
     $(".topsAdd").slideToggle();
     $(".thanks").show();
     $(".totalBox").show();
