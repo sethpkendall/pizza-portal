@@ -1,4 +1,5 @@
 .jumbotron {
+  margin-top: 50px;
   background-color: #ffffff;
   border: solid red 2px;
   padding-top: 20px;
@@ -12,6 +13,7 @@
 }
 .emphasis {
   font-style: italic;
+  text-decoration: underline;
 }
 .btn {
   background-color: red;

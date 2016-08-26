@@ -18,7 +18,7 @@
         <div class="row">
           <div class="col-xs-12 welcome">
             <hr>
-            <p>Here at Pizza Planet we believe in maintaining Stellar quality for <span class="emphasis">every order</span>.</p>
+            <p>Here at Pizza Planet we believe in maintaining Stellar quality for <span class="emphasis">every single</span> order.</p>
             <div class="row">
               <div class="col-xs-5 pizza1">
                 <form id="pizza1">
@@ -72,13 +72,25 @@
           <div class="row stagedReveal thanks">
             <div class="col-xs-10">
               <h1>thank you</h1>
+              <p>Hang on, I need another pizza!</p>
+              <form id="pizza2">
+                <div class="form-group">
+                  <label for="time">Select a size</label>
+                  <select class="form-control" id="size2">
+                    <option value="1">Small (Serves 2 people or 1 hungry person)</option>
+                    <option value="2">Medium (Serves 3 people or 2 hungry people or 1 quite hungry person)</option>
+                    <option value="3">Large (Serves 4 people or 3 hungry people or 1 very hungry person)</option>
+                    <option value="4">Extra-Large (Serves 5 people or 4 hungry people or 1 literally starving person)</option>
+                  </select>
+                </div>
+                <button class="btn-danger btn" type="submit" name="button">Add some toppings!</button>
+              </form>
             </div>
           </div>
         </div>
         <div class="col-xs-2 stagedReveal totalBox">
           <h3 class="heading">Order total</h3>
-          <ol>
-            <li></li>
+          <ol id="output">
           </ol>
           <p><span id="totalHere"></span></p>
         </div>
